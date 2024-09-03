@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
-    <title>Todo</title>
+    <title>Admin panel</title>
 </head>
 <body>
-<h1>Noted admin</h1>
+<h1>Noted admin</h1><br>
+
+<form th:action="@{/register}" method="get">
+    <button type="submit" class="btn btn-primary">New user account</button>
+</form>
 
 </body>
 </html>
