@@ -6,20 +6,24 @@
 </head>
 <body>
 
-<h1>Create new account</h1>
+<h1>Create new account</h1><br>
 
 <form th:action="@{/register}" method="post" th:object="${user}">
+
+    <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}">
+        <p th:each="err : ${#fields.errors('username')}" th:text="${err}"></p>
+    </div><br>
 
     <div>
         <label for="username">Username:</label>
         <input type="text" id="username" th:field="*{username}" required />
-    </div>
+    </div><br>
 
 
     <div>
         <label for="password">Password: </label>
         <input type="password" id="password" th:field="*{password}" required />
-    </div>
+    </div><br>
 
     <div>
         <button type="submit">Register</button>
