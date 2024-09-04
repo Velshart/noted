@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
     <title>Admin panel</title>
 </head>
+
 <body>
 <h1>Noted admin</h1><br>
 
 <form th:action="@{/register}" method="get">
     <button type="submit" class="btn btn-primary">New user account</button>
-</form>
+</form><br>
+
+<form th:action="@{/delete}" method="get">
+    <button type="submit" class="btn btn-primary">Delete account</button>
+</form><br>
 
 </body>
 </html>

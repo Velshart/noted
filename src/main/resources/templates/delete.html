@@ -3,34 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>New account</title>
+    <title>Delete account</title>
 </head>
 
 <body>
 
-<h1>Create new account</h1><br>
+<h1>Delete an account</h1>
 
-<form th:action="@{/register}" method="post" th:object="${user}">
+<form th:action="@{/delete}" method="post" th:object="${user}">
 
     <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}">
         <p th:each="err : ${#fields.errors('username')}" th:text="${err}"></p>
-    </div><br>
+    </div>
 
     <div>
         <label for="username">Username:</label>
         <input type="text" id="username" th:field="*{username}" required />
     </div><br>
 
-
     <div>
-        <label for="password">Password: </label>
-        <input type="password" id="password" th:field="*{password}" required />
-    </div><br>
-
-    <div>
-        <button type="submit">Register</button>
+        <button type="submit">Delete</button>
     </div>
-
 </form>
 
 </body>
