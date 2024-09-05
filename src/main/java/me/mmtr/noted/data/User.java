@@ -14,6 +14,7 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,4 +29,10 @@ public class User {
             joinColumns = {@JoinColumn(name = "USER_ID", referencedColumnName = "ID")},
             inverseJoinColumns = {@JoinColumn(name = "ROLE_ID", referencedColumnName = "ID")})
     private List<Role> roles = new ArrayList<>();
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_notes",
+    joinColumns = {@JoinColumn(name = "USER_ID", referencedColumnName = "ID")},
+    inverseJoinColumns = {@JoinColumn(name = "NOTE_ID", referencedColumnName = "ID")})
+    private List<Note> notes = new ArrayList<>();
 }

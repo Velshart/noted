@@ -8,6 +8,7 @@ import me.mmtr.noted.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -38,6 +39,7 @@ public class UserServiceImpl implements UserService {
         }
 
         userToSave.setRoles(List.of(userToSaveRole));
+        userToSave.setNotes(new ArrayList<>());
         USER_REPOSITORY.save(userToSave);
     }
 
