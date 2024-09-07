@@ -20,7 +20,7 @@ public class NoteController {
     @GetMapping("/add")
     public String add(Model model) {
         model.addAttribute("note", new Note());
-        return "add-note";
+        return "note";
     }
 
     @PostMapping("/add")
@@ -36,7 +36,7 @@ public class NoteController {
             return "redirect:/home";
         }
         model.addAttribute("note", noteOptional.get());
-        return "add-note";
+        return "note";
     }
 
     @PostMapping("/update/{id}")
