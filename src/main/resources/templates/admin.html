@@ -13,8 +13,10 @@
     <button type="submit" class="btn btn-primary">New user account</button>
 </form><br>
 
+
 <h2>Registered users:</h2><br>
 <div th:each="user : ${users}">
+
     <div th:text="${user.username}"></div>
     <form method="post" th:action="@{/delete}">
         <input type="hidden" th:name="id" th:value="${user.id}">
@@ -22,6 +24,10 @@
     </form><br>
 
 </div><br>
+
+<form th:action="@{/logout}" method="post">
+    <button type="submit" class="btn btn-primary">Log out</button>
+</form><br>
 
 </body>
 </html>
