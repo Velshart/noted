@@ -22,10 +22,10 @@ public class LoginController {
         return "login";
     }
 
-    @GetMapping("/home")
-    public String home() {
-        return "home";
-    }
+    //@GetMapping("/home")
+    //public String home() {
+        //return "home";
+    //}
 
     @GetMapping("/admin")
     public String admin() {

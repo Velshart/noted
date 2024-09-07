@@ -46,8 +46,8 @@ public class NoteController {
     }
 
 
-    @PostMapping("delete/{id}")
-    public String delete(@PathVariable Long id) {
+    @PostMapping("delete")
+    public String delete(@RequestParam Long id) {
         this.NOTE_SERVICE.delete(id);
         return "redirect:/home";
     }

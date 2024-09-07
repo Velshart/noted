@@ -7,8 +7,17 @@
 </head>
 
 <body>
+<h1>Welcome to Noted!</h1><br>
 
-<div>
+<div th:each="note : ${notes}">
+    <h2>Your notes:</h2><br>
+<div th:text="${note.title}"></div>
+    <a th:href="@{/note/update/{id}(id=${note.id})}">Open</a>
+    <form method="post" th:action="@{/note/delete}">
+        <input type="hidden" th:name="id" th:value="${note.id}">
+        <input type="submit" value="delete">
+    </form>
+
 </div><br>
 
 <form th:action="@{/note/add}" method="get">
