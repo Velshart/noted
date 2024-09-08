@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Noted</title>
-    <link type="text/css" rel="stylesheet" th:href="@{/css/login.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/login.css}" href="../static/css/login.css"/>
 </head>
 
 <body class="body">
 <h1>Please log in to continue</h1><br>
-
-<div th:if="${error}" th:text="${error}"></div>
 
 <div class="form-container">
     <form th:action="@{/login}" method="post">
@@ -24,10 +22,17 @@
             <input type="password" id="password" name="password" required/>
         </div><br>
 
+        <div class="error-message" th:if="${error}" th:text="${error}"></div>
+
         <div class="button-container">
             <button type="submit">Log in</button>
         </div>
+
+        <div>
+            <h5>Don't have an account? Ask an administrator to create one!</h5>
+        </div>
     </form><br>
 </div>
+
 </body>
 </html>

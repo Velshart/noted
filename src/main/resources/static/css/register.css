@@ -16,7 +16,7 @@ h1 {
     height: 50vh;
 }
 
-form {
+.register-form {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -31,7 +31,7 @@ label, input, button {
     margin-bottom: 15px;
 }
 
-button {
+.register-button {
     padding: 10px;
     background-color: #4CAF50;
     color: white;
@@ -45,11 +45,32 @@ button {
     justify-content: center;
 }
 
-button:hover {
+.cancel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-top: 10px;
+}
+
+.cancel-button {
+    padding: 20px 40px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background-color: #c62828;
+}
+
+.register-button:hover {
     background-color: #45a049;
 }
 
-.error-message p {
+.error-message {
     color: red;
     font-size: 0.875em;
     margin: 0;

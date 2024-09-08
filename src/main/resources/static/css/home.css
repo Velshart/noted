@@ -49,13 +49,15 @@ h2 {
     background-color: #3b83bd;
     padding: 10px 30px;
     font-size: 14px;
-    margin-left: 10px;
     border: none;
     border-radius: 5px;
     color: white;
     cursor: pointer;
     text-decoration: none;
-    font-family: Calibri, serif;
+}
+
+.note-open-button:hover {
+    background-color: #346d9c;
 }
 
 .note-title {
@@ -66,11 +68,15 @@ h2 {
     margin-right: 20px;
 }
 
-a:hover, input[type="submit"]:hover {
-    background-color: #346d9c;
+form input[type="submit"].delete-button {
+    background-color: #f44336; /* Czerwony kolor */
+    color: white;
 }
 
-/* Standard buttons like New note */
+form input[type="submit"].delete-button:hover {
+    background-color: #e53935; /* Ciemniejszy czerwony kolor przy najechaniu */
+}
+
 button, input[type="submit"] {
     background-color: #4CAF50;
     color: white;
@@ -86,7 +92,6 @@ button:hover, input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-/* Logout button */
 .logout-button {
     background-color: #fa5555;
 }
