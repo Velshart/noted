@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
     <title>New note</title>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/note.css}" href="../static/css/note.css"/>
 </head>
 <body>
 
 <h1>Create new note</h1><br>
 
-<div>
-
+<div class="form-container">
     <form method="post">
         <input type="text" placeholder="Title" class="input-field" th:field="*{note.title}" required>
-        <input type="text" placeholder="Text" class="input-field" th:field="*{note.text}">
+        <textarea placeholder="Text" class="input-field" th:field="*{note.text}"></textarea>
         <input type="submit" value="Save">
     </form>
-
 </div>
 
 </body>
