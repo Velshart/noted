@@ -1,0 +1,126 @@
+body {
+    background-color: lightgray;
+    font-family: Calibri, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.note-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.note-open-button {
+    margin-right: 10px;
+    background-color: #3b83bd;
+    padding: 10px 30px;
+    font-size: 14px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: Calibri, serif;
+}
+
+.note-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+a:hover, input[type="submit"]:hover {
+    background-color: #346d9c;
+}
+
+/* Standard buttons like New note */
+button, input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Logout button */
+.logout-button {
+    background-color: #fa5555;
+}
+
+.logout-button:hover {
+    background-color: #d94e4e;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .notes-container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .note-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .note-open-button, input[type="submit"] {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
