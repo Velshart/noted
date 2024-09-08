@@ -1,0 +1,118 @@
+body {
+    background-color: lightgray;
+    font-family: Calibri, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.user-item {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.user-item div {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+button, input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.logout-button, input[type="submit"] {
+    background-color: #fa5555;
+}
+
+.logout-button:hover, input[type="submit"]:hover {
+    background-color: #d94e4e;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .user-container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .user-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button, input[type="submit"] {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
