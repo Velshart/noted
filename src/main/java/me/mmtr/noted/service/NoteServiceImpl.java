@@ -37,6 +37,6 @@ public class NoteServiceImpl implements NoteService {
     @Override
     @Transactional
     public void delete(Long id) {
-       this.NOTE_DAO.delete(id);
+        this.NOTE_DAO.delete(id);
     }
 }
