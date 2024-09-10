@@ -26,15 +26,13 @@ public class RegistrationController {
 
     @PostMapping("/register")
     public String register(@ModelAttribute(name = "user") UserDTO userDTO,
-                           Model model,
-                           BindingResult bindingResult) {
+                           BindingResult bindingResult,
+                           Model model) {
 
         User user = USER_SERVICE.findUserByUsername(userDTO.getUsername());
 
         if (user != null && user.getUsername() != null && !user.getUsername().isEmpty()) {
-            bindingResult.rejectValue("username",
-                    "exists",
-                    "This username is already in use");
+            bindingResult.rejectValue("username", "exists", "This username is already in use");
         }
 
         if (bindingResult.hasErrors()) {
@@ -43,7 +41,7 @@ public class RegistrationController {
         }
 
         USER_SERVICE.saveUser(userDTO);
-
         return "redirect:/admin";
     }
+
 }
