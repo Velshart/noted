@@ -56,9 +56,8 @@ public class AccountDeleteControllerTests {
         public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
             http
                     .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                            .requestMatchers("error/404").permitAll()
                             .requestMatchers("/delete").permitAll()
-                            .requestMatchers("/admin").permitAll())
+                    )
                     .csrf(AbstractHttpConfigurer::disable);
             return http.build();
         }
