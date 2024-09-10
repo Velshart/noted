@@ -69,12 +69,12 @@ h2 {
 }
 
 form input[type="submit"].delete-button {
-    background-color: #f44336; /* Czerwony kolor */
+    background-color: #f44336;
     color: white;
 }
 
 form input[type="submit"].delete-button:hover {
-    background-color: #e53935; /* Ciemniejszy czerwony kolor przy najechaniu */
+    background-color: #e53935;
 }
 
 button, input[type="submit"] {

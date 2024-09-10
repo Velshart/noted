@@ -51,7 +51,7 @@ public class LoginControllerTests {
         @Bean
         public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
             http.authorizeHttpRequests(authorizeRequests -> {
-                    }).formLogin(formLogin -> formLogin.loginPage("/login").permitAll());
+            }).formLogin(formLogin -> formLogin.loginPage("/login").permitAll());
 
             return http.build();
         }
